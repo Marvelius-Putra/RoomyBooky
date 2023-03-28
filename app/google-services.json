@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "369774962225",
+    "project_id": "roomybooky",
+    "storage_bucket": "roomybooky.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369774962225:android:66b97fc917f04cc4675710",
+        "android_client_info": {
+          "package_name": "com.example.roomybooky"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369774962225-acelbgiptkbrohad7eq0uponu5pu4vn1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3823kejf_k1PQLt51ksvSSqCBEUvuBwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "369774962225-acelbgiptkbrohad7eq0uponu5pu4vn1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
