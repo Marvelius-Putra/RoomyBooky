@@ -7,6 +7,17 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- New Color Directory -->
     <color name="green">#4CD964</color>
     <color name="button_background">#FF0000</color>
+    <color name="primary_blue">#FF4A96D0</color>
+    <color name="primary_purple">#FF743B82</color>
+    <color name="orange">#FFF09336</color>
+    <color name="primary_black">#FF373737</color>
+    <color name="primary_grey">#FF666666</color>
+    <color name="secondary_grey">#FFBBBBBB</color>
+    <color name="green_alert">#FF7CFF89</color>
+    <color name="red_alert">#FFFF7171</color>
+    <color name="yellow_alert">#FFFDFF84</color>
 </resources>
