@@ -1,243 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/settings_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:textColor="@color/primary_black"
-        android:text="Settings"
-        app:layout_constraintStart_toEndOf="@+id/icon_back_admin"
-        app:layout_constraintTop_toTopOf="@+id/icon_back_admin" />
-
-    <ImageView
-        android:id="@+id/icon_back_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arrow_back_settings"
-        app:tint="@color/primary_black" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/profpic_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        app:layout_constraintStart_toStartOf="@+id/icon_back_admin"
-        app:layout_constraintTop_toBottomOf="@+id/icon_back_admin"
-        app:srcCompat="@drawable/admin_profpic" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/admin_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:fontFamily="@font/poppins_extrabold"
-        android:text="LIE MELINDA PUTRI WARDANA"
-        android:textColor="@color/primary_black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/profpic_admin"
-        app:layout_constraintTop_toTopOf="@+id/profpic_admin" />
+            <TextView
+                android:id="@+id/settings_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/primary_black"
+                android:text="Settings"
+                app:layout_constraintStart_toEndOf="@+id/icon_back_admin"
+                app:layout_constraintTop_toTopOf="@+id/icon_back_admin" />
 
-    <TextView
-        android:id="@+id/student_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_regular"
-        android:text="BN12345678910"
-        android:textSize="12sp"
-        android:textColor="@color/primary_black"
-        app:layout_constraintStart_toStartOf="@+id/admin_name"
-        app:layout_constraintTop_toBottomOf="@+id/admin_name" />
+            <ImageView
+                android:id="@+id/icon_back_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/arrow_back_settings"
+                app:tint="@color/primary_black" />
 
-    <View
-        android:id="@+id/divider1_admin"
-        android:layout_width="409dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/student_id" />
+            <ImageView
+                android:id="@+id/profpic_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                app:layout_constraintStart_toStartOf="@+id/icon_back_admin"
+                app:layout_constraintTop_toBottomOf="@+id/icon_back_admin"
+                app:srcCompat="@drawable/admin_profpic" />
 
-    <ImageView
-        android:id="@+id/icon_role_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="@+id/profpic_admin"
-        app:layout_constraintTop_toBottomOf="@+id/divider1_admin"
-        app:srcCompat="@drawable/role_icon" />
+            <TextView
+                android:id="@+id/admin_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="LIE MELINDA PUTRI WARDANA"
+                android:textColor="@color/primary_black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/profpic_admin"
+                app:layout_constraintTop_toTopOf="@+id/profpic_admin" />
 
-    <TextView
-        android:id="@+id/role_text_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Role"
-        android:textColor="@color/primary_grey"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/icon_role_admin"
-        app:layout_constraintTop_toBottomOf="@+id/divider1_admin" />
+            <TextView
+                android:id="@+id/student_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="BN12345678910"
+                android:textSize="12sp"
+                android:textColor="@color/primary_black"
+                app:layout_constraintStart_toStartOf="@+id/admin_name"
+                app:layout_constraintTop_toBottomOf="@+id/admin_name" />
 
-    <TextView
-        android:id="@+id/admin_role_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_extrabold"
-        android:text="Admin (D4730)"
-        android:textColor="@color/primary_black"
-        android:textSize="11sp"
-        app:layout_constraintStart_toStartOf="@+id/role_text_admin"
-        app:layout_constraintTop_toBottomOf="@+id/role_text_admin" />
+            <View
+                android:id="@+id/divider1_admin"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/student_id" />
 
-    <TextView
-        android:id="@+id/notes_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Librarians (Bandung)\nBINUS BANDUNG"
-        android:textColor="@color/primary_grey"
-        android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="@+id/admin_role_text"
-        app:layout_constraintTop_toBottomOf="@+id/admin_role_text" />
+            <ImageView
+                android:id="@+id/icon_role_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="@+id/profpic_admin"
+                app:layout_constraintTop_toBottomOf="@+id/divider1_admin"
+                app:srcCompat="@drawable/role_icon" />
 
-    <View
-        android:id="@+id/divider2_admin"
-        android:layout_width="409dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="24dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notes_text" />
+            <TextView
+                android:id="@+id/role_text_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Role"
+                android:textColor="@color/primary_grey"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/icon_role_admin"
+                app:layout_constraintTop_toBottomOf="@+id/divider1_admin" />
 
-    <ImageView
-        android:id="@+id/privpol_icon_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="@+id/icon_role_admin"
-        app:layout_constraintTop_toBottomOf="@+id/divider2_admin"
-        app:srcCompat="@drawable/privpol_icon" />
+            <TextView
+                android:id="@+id/admin_role_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="Admin (D4730)"
+                android:textColor="@color/primary_black"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="@+id/role_text_admin"
+                app:layout_constraintTop_toBottomOf="@+id/role_text_admin" />
 
-    <TextView
-        android:id="@+id/privpol_text_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Privacy Policy"
-        android:textColor="@color/primary_black"
-        android:textSize="11sp"
-        app:layout_constraintStart_toStartOf="@+id/notes_text"
-        app:layout_constraintTop_toTopOf="@+id/privpol_icon_admin" />
+            <TextView
+                android:id="@+id/notes_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Librarians (Bandung)\nBINUS BANDUNG"
+                android:textColor="@color/primary_grey"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/admin_role_text"
+                app:layout_constraintTop_toBottomOf="@+id/admin_role_text" />
 
-    <ImageView
-        android:id="@+id/terms_icon_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="@+id/privpol_icon_admin"
-        app:layout_constraintTop_toBottomOf="@+id/privpol_text_admin"
-        app:srcCompat="@drawable/terms_icon" />
+            <View
+                android:id="@+id/divider2_admin"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/notes_text" />
 
-    <TextView
-        android:id="@+id/terms_text_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Terms and Conditions"
-        android:textColor="@color/primary_black"
-        android:textSize="11sp"
-        app:layout_constraintStart_toStartOf="@+id/privpol_text_admin"
-        app:layout_constraintTop_toTopOf="@+id/terms_icon_admin" />
+            <ImageView
+                android:id="@+id/privpol_icon_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="@+id/icon_role_admin"
+                app:layout_constraintTop_toBottomOf="@+id/divider2_admin"
+                app:srcCompat="@drawable/privpol_icon" />
 
-    <ImageView
-        android:id="@+id/help_icons_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="@+id/terms_icon_admin"
-        app:layout_constraintTop_toBottomOf="@+id/terms_text_admin"
-        app:srcCompat="@drawable/helps_icon" />
+            <TextView
+                android:id="@+id/privpol_text_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Privacy Policy"
+                android:textColor="@color/primary_black"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="@+id/notes_text"
+                app:layout_constraintTop_toTopOf="@+id/privpol_icon_admin" />
 
-    <TextView
-        android:id="@+id/helps_text_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Helps and Support"
-        android:textColor="@color/primary_black"
-        android:textSize="11sp"
-        app:layout_constraintStart_toStartOf="@+id/terms_text_admin"
-        app:layout_constraintTop_toTopOf="@+id/help_icons_admin" />
+            <ImageView
+                android:id="@+id/terms_icon_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="@+id/privpol_icon_admin"
+                app:layout_constraintTop_toBottomOf="@+id/privpol_text_admin"
+                app:srcCompat="@drawable/terms_icon" />
 
-    <View
-        android:id="@+id/divider3_admin"
-        android:layout_width="409dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="24dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/helps_text_admin" />
+            <TextView
+                android:id="@+id/terms_text_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Terms and Conditions"
+                android:textColor="@color/primary_black"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="@+id/privpol_text_admin"
+                app:layout_constraintTop_toTopOf="@+id/terms_icon_admin" />
 
-    <View
-        android:id="@+id/divider4_admin"
-        android:layout_width="409dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="130dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider3_admin" />
+            <ImageView
+                android:id="@+id/help_icons_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="@+id/terms_icon_admin"
+                app:layout_constraintTop_toBottomOf="@+id/terms_text_admin"
+                app:srcCompat="@drawable/helps_icon" />
 
-    <ImageView
-        android:id="@+id/logout_icon_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="@+id/help_icons_admin"
-        app:layout_constraintTop_toBottomOf="@+id/divider4_admin"
-        app:srcCompat="@drawable/logout_icon" />
+            <TextView
+                android:id="@+id/helps_text_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Helps and Support"
+                android:textColor="@color/primary_black"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="@+id/terms_text_admin"
+                app:layout_constraintTop_toTopOf="@+id/help_icons_admin" />
 
-    <TextView
-        android:id="@+id/logout_text_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Log Out"
-        android:textColor="@color/primary_black"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/helps_text_admin"
-        app:layout_constraintTop_toTopOf="@+id/logout_icon_admin" />
+            <View
+                android:id="@+id/divider3_admin"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/helps_text_admin" />
 
-    <View
-        android:id="@+id/divider5_admin"
-        android:layout_width="409dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="24dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logout_text_admin" />
+            <View
+                android:id="@+id/divider4_admin"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="130dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider3_admin" />
 
-    <TextView
-        android:id="@+id/footer_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Version 1.0.0\n2023 BINUS UNIVERSITY\nAll rights reserved"
-        android:textColor="@color/primary_black"
-        android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="@+id/logout_icon_admin"
-        app:layout_constraintTop_toBottomOf="@+id/divider5_admin" />
+            <ImageView
+                android:id="@+id/logout_icon_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="@+id/help_icons_admin"
+                app:layout_constraintTop_toBottomOf="@+id/divider4_admin"
+                app:srcCompat="@drawable/logout_icon" />
+
+            <TextView
+                android:id="@+id/logout_text_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Log Out"
+                android:textColor="@color/primary_black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/helps_text_admin"
+                app:layout_constraintTop_toTopOf="@+id/logout_icon_admin" />
+
+            <View
+                android:id="@+id/divider5_admin"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/logout_text_admin" />
+
+            <TextView
+                android:id="@+id/footer_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Version 1.0.0\n2023 BINUS UNIVERSITY\nAll rights reserved"
+                android:textColor="@color/primary_black"
+                android:textSize="10sp"
+                android:paddingBottom="24dp"
+                app:layout_constraintStart_toStartOf="@+id/logout_icon_admin"
+                app:layout_constraintTop_toBottomOf="@+id/divider5_admin" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
