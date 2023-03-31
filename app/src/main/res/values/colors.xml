@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="green">#4CD964</color>
     <color name="button_background">#FF0000</color>
+    <color name="binusorange">#DA8608</color>
+    <color name="grey">#AFB1B6</color>
 </resources>
