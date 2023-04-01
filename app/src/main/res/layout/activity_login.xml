@@ -8,7 +8,7 @@
     tools:context=".LoginActivity">
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/IDpass"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="30dp"
@@ -19,13 +19,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iDuser" />
+        app:layout_constraintTop_toBottomOf="@+id/IDuser" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="210dp"
-        app:layout_constraintBottom_toTopOf="@+id/iDuser"
+        app:layout_constraintBottom_toTopOf="@+id/IDuser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +34,7 @@
         tools:srcCompat="@drawable/gambarorang" />
 
     <EditText
-        android:id="@+id/iDuser"
+        android:id="@+id/IDuser"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="30dp"
@@ -90,10 +90,27 @@
         android:text="Login"
         android:textColor="@color/white"
         android:textSize="18dp"
+        android:id="@+id/IDsubmitbtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/IDpass"
         app:layout_constraintVertical_bias="0.214" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/IDprogress"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/progressbar"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
