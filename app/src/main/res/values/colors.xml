@@ -20,4 +20,6 @@
     <color name="green_alert">#FF7CFF89</color>
     <color name="red_alert">#FFFF7171</color>
     <color name="yellow_alert">#FFFDFF84</color>
+    <color name="binusorange">#DA8608</color>
+    <color name="grey">#AFB1B6</color>
 </resources>
