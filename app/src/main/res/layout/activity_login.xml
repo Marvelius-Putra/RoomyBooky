@@ -14,7 +14,8 @@
         android:layout_margin="30dp"
         android:background="@drawable/rounded_inputbox"
         android:paddingLeft="20dp"
-        android:text="Password"
+        android:hint="Password"
+        android:textColorHint="@color/grey"
         android:textColor="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -31,7 +32,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        tools:srcCompat="@drawable/gambarorang" />
+        android:visibility="visible"
+        android:src="@drawable/gambarorang" />
 
     <EditText
         android:id="@+id/IDuser"
@@ -40,7 +42,8 @@
         android:layout_margin="30dp"
         android:background="@drawable/rounded_inputbox"
         android:paddingLeft="20dp"
-        android:text="User ID"
+        android:hint="E-mail"
+        android:textColorHint="@color/grey"
         android:textColor="@color/grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

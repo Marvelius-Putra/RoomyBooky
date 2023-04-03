@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -16,12 +17,12 @@ public class HomePage extends AppCompatActivity {
 
     //instantiate the rest of the objects here
     BottomNavigationView bottomNavigationView;
+    TextView user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-
         bottomNavigationView = findViewById(R.id.BottomNavID);
 
         //replace the FrameLayout with fragment object instantiated above
