@@ -3,4 +3,5 @@
 
     <!-- Card View - Request Page -->
     <string name="header"><u>Room</u></string>
+    <string name="details"><i>See Booking Details</i></string>
 </resources>
