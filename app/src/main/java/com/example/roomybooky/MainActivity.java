@@ -59,8 +59,6 @@ public class MainActivity extends AppCompatActivity {
             user_password.setError("Password is required");
             return;
         }
-
-
 //      check the inputed user to database
         fAuth.signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {

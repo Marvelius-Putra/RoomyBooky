@@ -14,7 +14,7 @@
         android:layout_marginLeft="30dp"
         android:text="Good Evening,"
         android:textColor="@color/white"
-        android:textSize="12sp"
+        android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
