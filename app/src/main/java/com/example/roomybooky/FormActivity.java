@@ -5,15 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.roomybooky.models.room;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.button.MaterialButtonToggleGroup;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,6 +28,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 import java.util.Queue;
 
@@ -33,6 +38,7 @@ public class FormActivity extends AppCompatActivity {
     Button f7,f8,f9,f10,f11,f12;
     int floor;
     Integer clicked = 1;
+    Context context;
 
     RecyclerView RoomrecyclerView;
     FormAdapter formAdapter;
@@ -41,6 +47,7 @@ public class FormActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
+        context = this;
 
         RoomrecyclerView = findViewById(R.id.roomRecycle);
 
@@ -96,13 +103,12 @@ public class FormActivity extends AppCompatActivity {
                             roomsRef.child("floor1").addValueEventListener(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                    for(DataSnapshot dataSnapshot : snapshot.getChildren()){
+                                    for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                                         room model = dataSnapshot.getValue(room.class);
                                         roomList.add(model);
                                     }
                                     formAdapter.notifyDataSetChanged();
                                 }
-
                                 @Override
                                 public void onCancelled(@NonNull DatabaseError error) {
 
@@ -116,7 +122,7 @@ public class FormActivity extends AppCompatActivity {
                             roomsRef.child("floor2").addValueEventListener(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                    for(DataSnapshot dataSnapshot : snapshot.getChildren()){
+                                    for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                                         room model = dataSnapshot.getValue(room.class);
                                         roomList.add(model);
                                     }
@@ -148,7 +154,7 @@ public class FormActivity extends AppCompatActivity {
                     }
                 }
             }
+
         });
     }
-
 }

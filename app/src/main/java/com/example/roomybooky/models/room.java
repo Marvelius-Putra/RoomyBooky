@@ -1,46 +1,41 @@
 package com.example.roomybooky.models;
 
-import java.util.List;
+import java.util.Map;
 
 public class room {
-    String name;
-    Integer floor;
-    Integer capacity;
-    String category;
-    List<Availability> availability;
+    private int capacity;
+    private String category;
+    private int floor;
+    private String name;
+    private Map<String, String> availability;
+    private Map<String, Boolean> status;
 
     public  room(){
 
     }
 
-    public room(String name, Integer floor, Integer capacity, String category) {
-        this.name = name;
-        this.floor = floor;
+    public room(int capacity, String category, int floor, String name, Map<String, String> availability, Map<String, Boolean> status) {
         this.capacity = capacity;
         this.category = category;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getFloor() {
-        return floor;
-    }
-
-    public void setFloor(Integer floor) {
         this.floor = floor;
+        this.name = name;
+        this.availability = availability;
+        this.status = status;
     }
 
-    public Integer getCapacity() {
+    public Map<String, Boolean> getStatus() {
+        return status;
+    }
+
+    public void setStatus(Map<String, Boolean> status) {
+        this.status = status;
+    }
+
+    public int getCapacity() {
         return capacity;
     }
 
-    public void setCapacity(Integer capacity) {
+    public void setCapacity(int capacity) {
         this.capacity = capacity;
     }
 
@@ -52,12 +47,27 @@ public class room {
         this.category = category;
     }
 
-    public List<Availability> getAvailability() {
+    public int getFloor() {
+        return floor;
+    }
+
+    public void setFloor(int floor) {
+        this.floor = floor;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Map<String, String> getAvailability() {
         return availability;
     }
 
-    public void setAvailability(List<Availability> availability) {
+    public void setAvailability(Map<String, String> availability) {
         this.availability = availability;
     }
 }
-

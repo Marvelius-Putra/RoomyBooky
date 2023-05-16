@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment"
+    tools:context=".AdminFragment"
     android:background="@drawable/gradient_background">
 
     <TextView
@@ -41,32 +41,4 @@
         app:layout_constraintVertical_bias="0.009" />
 
 
-    <ImageView
-        android:id="@+id/bookRoom"
-        android:layout_width="379dp"
-        android:layout_height="127dp"
-        android:layout_margin="30dp"
-        android:adjustViewBounds="true"
-        android:padding="0dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/button1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.407" />
-
-    <ImageView
-        android:id="@+id/bookHistory"
-        android:layout_width="379dp"
-        android:layout_height="127dp"
-        android:adjustViewBounds="true"
-        android:padding="0dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/button2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.72" />
 </androidx.constraintlayout.widget.ConstraintLayout>

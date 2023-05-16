@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,8 +20,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private TextView user;
-    private TextView pass;
+    private EditText user;
+    private EditText pass;
     private Button submit;
     private ProgressBar progressBar;
     private FirebaseAuth fAuth;
@@ -31,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         user = findViewById(R.id.IDuser);
         pass = findViewById(R.id.IDpass);
+        progressBar = findViewById(R.id.IDprogress);
         submit = findViewById(R.id.IDsubmitbtn);
         fAuth = FirebaseAuth.getInstance();
 
@@ -39,14 +41,14 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 progressBar.setVisibility(View.VISIBLE);
                 String username = user.getText().toString();
-                String password = user.getText().toString();
-                verification(username,password);
+                String password = pass.getText().toString();
+                verification(username, password);
             }
         });
     }
 
     public void verification(String username, String password){
-        if(TextUtils.isEmpty(username) || TextUtils.isEmpty(password)){
+        if(TextUtils.isEmpty(username) && TextUtils.isEmpty(password)){
             Toast.makeText(this, "Please fill in the required fields!", Toast.LENGTH_SHORT).show();
         }else{
             fAuth.signInWithEmailAndPassword(username,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -54,10 +56,21 @@ public class LoginActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         progressBar.setVisibility(View.GONE);
-                        startActivity(new Intent(LoginActivity.this, HomePage.class));
-                        finish();
+                        if(username.equals("admin@gmail.com")){
+                            Intent i = new Intent(LoginActivity.this, AdminPage.class);
+                            //i.putExtra("USER", username);
+                            startActivity(i);
+                            finish();
+                        }
+                        else{
+                            Intent i = new Intent(LoginActivity.this, HomePage.class);
+                            //i.putExtra("USER", username);
+                            startActivity(i);
+                            finish();
+                        }
+
                     }else{
-                        Toast.makeText(LoginActivity.this, "Failed to Login :c", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         progressBar.setVisibility(View.GONE);
                     }
                 }
