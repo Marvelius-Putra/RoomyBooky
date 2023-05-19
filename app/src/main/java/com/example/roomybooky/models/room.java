@@ -6,7 +6,7 @@ public class room {
     private int capacity;
     private String category;
     private int floor;
-    private String name;
+    private String room;
     private Map<String, String> availability;
     private Map<String, Boolean> status;
 
@@ -14,20 +14,12 @@ public class room {
 
     }
 
-    public room(int capacity, String category, int floor, String name, Map<String, String> availability, Map<String, Boolean> status) {
+    public room(int capacity, String category, int floor, String room, Map<String, String> availability, Map<String, Boolean> status) {
         this.capacity = capacity;
         this.category = category;
         this.floor = floor;
-        this.name = name;
+        this.room = room;
         this.availability = availability;
-        this.status = status;
-    }
-
-    public Map<String, Boolean> getStatus() {
-        return status;
-    }
-
-    public void setStatus(Map<String, Boolean> status) {
         this.status = status;
     }
 
@@ -55,12 +47,12 @@ public class room {
         this.floor = floor;
     }
 
-    public String getName() {
-        return name;
+    public String getRoom() {
+        return room;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setRoom(String room) {
+        this.room = room;
     }
 
     public Map<String, String> getAvailability() {
@@ -69,5 +61,13 @@ public class room {
 
     public void setAvailability(Map<String, String> availability) {
         this.availability = availability;
+    }
+
+    public Map<String, Boolean> getStatus() {
+        return status;
+    }
+
+    public void setStatus(Map<String, Boolean> status) {
+        this.status = status;
     }
 }

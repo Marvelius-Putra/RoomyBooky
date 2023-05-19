@@ -49,13 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/calenderDate"
         app:singleSelection="true">
 
-        <Button
-            android:id="@+id/floor7"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="56dp"
-            android:layout_height="wrap_content"
-            android:insetRight="5dp"
-            android:text="7" />
+
 
         <Button
             android:id="@+id/floor8"
@@ -81,21 +75,7 @@
             android:insetRight="5dp"
             android:text="10" />
 
-        <Button
-            android:id="@+id/floor11"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="56dp"
-            android:layout_height="wrap_content"
-            android:insetRight="5dp"
-            android:text="11" />
 
-        <Button
-            android:id="@+id/floor12"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="56dp"
-            android:layout_height="wrap_content"
-            android:insetRight="5dp"
-            android:text="12" />
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
     <androidx.recyclerview.widget.RecyclerView

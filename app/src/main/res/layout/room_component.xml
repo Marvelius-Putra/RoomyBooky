@@ -33,13 +33,13 @@
 
     <RadioGroup
         android:id="@+id/radioTime"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="186dp"
+        android:layout_height="50dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/roomList"
         app:layout_constraintTop_toBottomOf="@id/roomName">
 
@@ -63,5 +63,15 @@
 
     </RadioGroup>
 
+    <Button
+        android:id="@+id/btn_book"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="36dp"
+        android:text="Book"
+        app:layout_constraintEnd_toEndOf="@+id/roomList"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toEndOf="@+id/radioTime"
+        app:layout_constraintTop_toTopOf="@+id/roomList" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

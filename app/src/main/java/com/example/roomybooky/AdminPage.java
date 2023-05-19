@@ -14,7 +14,7 @@ public class AdminPage extends AppCompatActivity {
 
     //instantiate an object of the fragment here
     AdminFragment adminFragment = new AdminFragment();
-
+    RequestFragment requestFragment = new RequestFragment();
 
     //instantiate the rest of the objects here
     BottomNavigationView bottomNavigationView;
@@ -38,6 +38,9 @@ public class AdminPage extends AppCompatActivity {
                     //follow this template with the rest of the fragments on the navbar
                     case R.id.Home:
                         getSupportFragmentManager().beginTransaction().replace(R.id.containerID,adminFragment).commit();
+                        return true;
+                    case R.id.Category:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.containerID,requestFragment).commit();
                         return true;
                 }
                 return false;

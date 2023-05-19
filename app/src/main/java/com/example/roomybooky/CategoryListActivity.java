@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 public class CategoryListActivity extends AppCompatActivity {
     ImageView btn_class, btn_lab, btn_sadc, btn_lkc;
-    Integer flag;
+    String category;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,9 +24,9 @@ public class CategoryListActivity extends AppCompatActivity {
         btn_class.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                flag = 1;
+                category = "Class";
                 Intent i = new Intent(CategoryListActivity.this, FormActivity.class);
-                i.putExtra("flag", flag);
+                i.putExtra("category", category);
                 startActivity(i);
             }
         });
@@ -34,9 +34,9 @@ public class CategoryListActivity extends AppCompatActivity {
         btn_lab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                flag = 2;
+                category = "Lab";
                 Intent i = new Intent(CategoryListActivity.this, FormActivity.class);
-                i.putExtra("flag", flag);
+                i.putExtra("category", category);
                 startActivity(i);
             }
         });
@@ -44,9 +44,9 @@ public class CategoryListActivity extends AppCompatActivity {
         btn_sadc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                flag = 3;
+                category = "SADC";
                 Intent i = new Intent(CategoryListActivity.this, FormActivity.class);
-                i.putExtra("flag", flag);
+                i.putExtra("category", category);
                 startActivity(i);
             }
         });
@@ -54,9 +54,9 @@ public class CategoryListActivity extends AppCompatActivity {
         btn_lkc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                flag = 4;
+                category = "LKC";
                 Intent i = new Intent(CategoryListActivity.this, FormActivity.class);
-                i.putExtra("flag", flag);
+                i.putExtra("category", category);
                 startActivity(i);
             }
         });
