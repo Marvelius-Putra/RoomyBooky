@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    tools:context=".UI.User.BookingConfirmActivity">
+
+    <TextView
+        android:id="@+id/btnBackToForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:drawableLeft="@drawable/round_arrow_back_ios_24"
+        android:drawablePadding="8dp"
+        android:text="Back"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold">
+    </TextView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Booking Confirmation"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <ImageView
+            android:id="@+id/profPicImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/profpic"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </ImageView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/containerBookingConfirmation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:background="@drawable/background_rectangle">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="Booking Details"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/primary_black"
+                    android:textSize="24sp"
+                    android:textStyle="bold">
+                </TextView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Date\t\t\t\t\t\t:"
+                        android:textColor="@color/primary_black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="24dp">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/dateOfBookingDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="19 January 2023"
+                        android:textColor="@color/primary_black"
+                        android:textSize="20sp"
+                        android:layout_marginStart="8dp">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Floor\t\t\t\t\t\t:"
+                        android:textColor="@color/primary_black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="24dp">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/floorBookingDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9th"
+                        android:textColor="@color/primary_black"
+                        android:textSize="20sp"
+                        android:layout_marginStart="8dp">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Room\t\t\t\t\t:"
+                        android:textColor="@color/primary_black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="24dp">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/roomBookingDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9001"
+                        android:textColor="@color/primary_black"
+                        android:textSize="20sp"
+                        android:layout_marginStart="8dp">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Category\t\t:"
+                        android:textColor="@color/primary_black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="24dp">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/categoryBookingDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Class"
+                        android:textColor="@color/primary_black"
+                        android:textSize="20sp"
+                        android:layout_marginStart="8dp">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Time\t\t\t\t\t\t:"
+                        android:textColor="@color/primary_black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="24dp">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/timeBookingDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="13.20 - 15.00"
+                        android:textColor="@color/primary_black"
+                        android:textSize="20sp"
+                        android:layout_marginStart="8dp">
+                    </TextView>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Booking Reason"
+                    android:textColor="@color/primary_black"
+                    android:textSize="20sp"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="24dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/inputReasonField"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:inputType="textLongMessage"
+                    android:paddingStart="16dp"
+                    android:contentDescription="booking reason"
+                    android:background="@drawable/background_field">
+                </EditText>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Number of People"
+                    android:textColor="@color/primary_black"
+                    android:textSize="20sp"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="24dp">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/inputNumberPeopleField"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:inputType="number"
+                    android:paddingStart="16dp"
+                    android:contentDescription="number people"
+                    android:background="@drawable/background_field">
+                </EditText>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSendRequest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="26dp"
+                    android:background="@drawable/button_orange"
+                    android:text="Send Request"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp">
+                </androidx.appcompat.widget.AppCompatButton>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
