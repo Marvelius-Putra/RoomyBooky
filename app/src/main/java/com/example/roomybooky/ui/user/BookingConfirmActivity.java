@@ -41,7 +41,8 @@ public class BookingConfirmActivity extends AppCompatActivity {
   private AppCompatButton btnSendRequest;
   DatabaseReference bookingsRef;
   String user_nim, user_name, user_email, category, floorValue;
-  int members, floorRoom = 0;
+  int floorRoom = 0;
+  Long members;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -128,11 +129,8 @@ public class BookingConfirmActivity extends AppCompatActivity {
           }
         }
         @Override
-        public void onCancelled(@NonNull DatabaseError error) {
-          // Handle the error
-        }
+        public void onCancelled(@NonNull DatabaseError error) {}
       });
-      // Rest of your code
     } else {
       floorTxt.setText(selectedFloor);
     }
@@ -161,32 +159,23 @@ public class BookingConfirmActivity extends AppCompatActivity {
     //Initialize database for bookings
     bookingsRef = FirebaseDatabase.getInstance().getReference("bookings");
     btnSendRequest.setOnClickListener(v -> {
-      if (!validationInput()) return;
-      // isi sama backend & sweet allert
+      if (!validationReason()) return;
       String input_description = bookingReason.getText().toString().trim();
       String input_people = numberPeople.getText().toString().trim();
-      if (!input_people.isEmpty()) {
-        try {
-          // Convert the input text to an integer
-          members = Integer.parseInt(input_people);
-
-          // Use the integer value as needed
-          // For example, display it or perform calculations
-
-          addBookingToDatabase(user_name, user_email, user_nim, roomName, floorRoom, category, selectedDate, members, selectedTime, updatedTime, input_description, "Pending");
-        } catch (NumberFormatException e) {
-          // Handle the case where the input cannot be parsed as an integer
-          Toast.makeText(BookingConfirmActivity.this, "Invalid input", Toast.LENGTH_SHORT).show();
+      try {
+        members = Long.parseLong(input_people);
+        if (members <= 0 || members > 50) {
+          Toast.makeText(this, "Number of people isn't eligible", Toast.LENGTH_SHORT).show();
+          return;
         }
-      } else {
-        // Handle the case where the input is empty
-        Toast.makeText(BookingConfirmActivity.this, "Input is empty", Toast.LENGTH_SHORT).show();
+        addBookingToDatabase(user_name, user_email, user_nim, roomName, floorRoom, category, selectedDate, members, selectedTime, updatedTime, input_description, "Pending");
+      } catch (NumberFormatException e) {
+        Toast.makeText(this, "Number of people isn't eligible", Toast.LENGTH_SHORT).show();
       }
-
     });
   }
 
-  private  void addBookingToDatabase(String username, String email, String nim, String room, int floor, String category, String date, int member, String startTime, String endTime, String description, String status){
+  private  void addBookingToDatabase(String username, String email, String nim, String room, int floor, String category, String date, Long member, String startTime, String endTime, String description, String status){
     String bookingKey = "B" + bookingsRef.push().getKey();
     Booking model = new Booking(username, email, nim, room, floor, category, date, member, startTime, endTime, description, status, bookingKey);
 
@@ -201,7 +190,7 @@ public class BookingConfirmActivity extends AppCompatActivity {
     });
   }
 
-  public boolean validationInput() {
+  public boolean validationReason() {
     if (bookingReason.getText().toString().isEmpty() || numberPeople.getText().toString().isEmpty()) {
       Toast.makeText(this, "All fields must be filled", Toast.LENGTH_SHORT).show();
       return false;
@@ -210,15 +199,8 @@ public class BookingConfirmActivity extends AppCompatActivity {
       Toast.makeText(this, "Reason is too short", Toast.LENGTH_SHORT).show();
       return false;
     }
-    else if (bookingReason.getText().toString().length() > 100) {
+    else if (bookingReason.getText().toString().length() > 30) {
       Toast.makeText(this, "Reason is too long", Toast.LENGTH_SHORT).show();
-      return false;
-    }
-    else if (
-      Integer.parseInt(numberPeople.getText().toString()) <= 0 ||
-      Integer.parseInt(numberPeople.getText().toString()) > 50
-    ) {
-      Toast.makeText(this, "Number of people isn't eligible", Toast.LENGTH_SHORT).show();
       return false;
     }
     return true;

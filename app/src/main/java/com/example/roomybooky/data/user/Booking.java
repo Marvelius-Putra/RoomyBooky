@@ -13,7 +13,7 @@ public class Booking implements Parcelable {
   private int floor;
   private String category;
   private String date;
-  private int member;
+  private Long member;
   private String startTime;
   private String endTime;
   private String description;
@@ -30,7 +30,7 @@ public class Booking implements Parcelable {
     int floor,
     String category,
     String date,
-    int member,
+    Long member,
     String startTime,
     String endTime,
     String description,
@@ -60,7 +60,7 @@ public class Booking implements Parcelable {
     floor = in.readInt();
     category = in.readString();
     date = in.readString();
-    member = in.readInt();
+    member = in.readLong();
     startTime = in.readString();
     endTime = in.readString();
     description = in.readString();
@@ -140,11 +140,11 @@ public class Booking implements Parcelable {
     this.date = date;
   }
 
-  public int getMember() {
+  public Long getMember() {
     return member;
   }
 
-  public void setMember(int member) {
+  public void setMember(Long member) {
     this.member = member;
   }
 
@@ -202,7 +202,7 @@ public class Booking implements Parcelable {
     dest.writeInt(floor);
     dest.writeString(category);
     dest.writeString(date);
-    dest.writeInt(member);
+    dest.writeLong(member);
     dest.writeString(startTime);
     dest.writeString(endTime);
     dest.writeString(description);
