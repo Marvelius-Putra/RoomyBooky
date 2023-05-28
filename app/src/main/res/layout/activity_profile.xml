@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.ProfileActivity">
+
+    <TextView
+        android:id="@+id/backToMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_black"
+        android:drawableLeft="@drawable/arrow_back_settings"
+        android:padding="16dp"
+        android:drawablePadding="8dp"
+        android:text="Settings">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp">
+            <ImageView
+                android:id="@+id/userProfpic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                app:srcCompat="@drawable/user_profile" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text=""
+                    android:textColor="@color/primary_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/studentId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="BN12345678910"
+                    android:textSize="12sp"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/primary_black"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider1_admin"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="?android:attr/listDivider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp">
+
+            <ImageView
+                android:id="@+id/icon_role_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                app:srcCompat="@drawable/role_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/role_text_admin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Role"
+                    android:textColor="@color/primary_grey"
+                    android:textSize="10sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/role_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text=""
+                        android:layout_marginStart="24dp"
+                        android:textColor="@color/primary_black"
+                        android:textSize="11sp"/>
+
+                    <TextView
+                        android:id="@+id/nim_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text=""
+                        android:layout_marginStart="4dp"
+                        android:textColor="@color/primary_black"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/notes_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Undergraduate (Bandung)\nBINUS BANDUNG"
+                    android:textColor="@color/primary_grey"
+                    android:layout_marginStart="24dp"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider2_admin"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:background="?android:attr/listDivider"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/privpolCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/privpol_text_admin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Privacy Policy"
+                android:textColor="@color/primary_black"
+                android:textSize="11sp"
+                android:drawableLeft="@drawable/privpol_icon"
+                android:padding="16dp"
+                android:drawablePadding="27dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/termsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/terms_text_admin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Terms and Conditions"
+                android:textColor="@color/primary_black"
+                android:textSize="11sp"
+                android:drawableLeft="@drawable/terms_icon"
+                android:padding="16dp"
+                android:drawablePadding="26dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/helpsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/helps_text_admin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Helps and Support"
+                android:textColor="@color/primary_black"
+                android:textSize="11sp"
+                android:drawableLeft="@drawable/helps_icon"
+                android:padding="16dp"
+                android:drawablePadding="26dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider4_admin"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="130dp"
+        android:background="?android:attr/listDivider"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logoutCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/logout_text_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Log Out"
+            android:textColor="@color/primary_black"
+            android:textSize="14sp"
+            android:drawableLeft="@drawable/logout_icon"
+            android:padding="16dp"
+            android:drawablePadding="20dp"
+            app:layout_constraintStart_toStartOf="@+id/helps_text_admin"
+            app:layout_constraintTop_toTopOf="@+id/logout_icon_admin" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/footer_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_gravity="bottom"
+        android:padding="16dp"
+        android:text="Version 1.0.0\n2023 BINUS UNIVERSITY\nAll rights reserved"
+        android:textColor="@color/primary_black"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/logout_icon_admin"
+        app:layout_constraintTop_toBottomOf="@+id/divider5_admin" />
+
+</LinearLayout>

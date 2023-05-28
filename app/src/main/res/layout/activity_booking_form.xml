@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    tools:context=".ui.user.BookingFormActivity">
+
+    <TextView
+        android:id="@+id/btnBackToForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:drawableLeft="@drawable/round_arrow_back_ios_24"
+        android:drawablePadding="8dp"
+        android:text="Back"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold">
+    </TextView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Booking Form"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <ImageView
+            android:id="@+id/profPicImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/profpic"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </ImageView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/containerBookingConfirmation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:background="@drawable/background_rectangle">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:firstDayOfWeek="1"
+                    android:maxDate="12/31/2030"
+                    android:minDate="01/01/2020"
+                    android:showWeekNumber="false"/>
+
+                <TextView
+                    android:id="@+id/calenderDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text=""
+                    android:textColor="@color/primary_black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:paddingStart="24dp"/>
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/floorList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="24dp"
+                    app:singleSelection="true">
+
+                    <Button
+                        android:id="@+id/floor8"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:insetRight="5dp"
+                        android:text="8" />
+
+                    <Button
+                        android:id="@+id/floor9"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:insetRight="5dp"
+                        android:text="9" />
+
+                    <Button
+                        android:id="@+id/floor10"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:insetRight="5dp"
+                        android:text="10" />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/roomRecycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/room_component" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
