@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.roomybooky.R;
+import com.example.roomybooky.ui.admin.AdminPage;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -67,9 +68,28 @@ public class ProfileActivity extends AppCompatActivity implements Serializable {
     // init textview listener (buttonGoToHome)
     buttonGoToHome = (TextView) findViewById(R.id.backToMain);
     buttonGoToHome.setOnClickListener(v -> {
-      Intent intent = new Intent(ProfileActivity.this, HomePage.class);
-      finish();
-      startActivity(intent);
+      query.addValueEventListener(new ValueEventListener() {
+        @Override
+        public void onDataChange(@NonNull DataSnapshot snapshot) {
+          Intent intent;
+          if(snapshot.exists()){
+            for(DataSnapshot ds : snapshot.getChildren()){
+              if (ds.child("role").getValue().toString().equals("Admin")) {
+                intent = new Intent(ProfileActivity.this, AdminPage.class);
+              }
+              else {
+                intent = new Intent(ProfileActivity.this, HomePage.class);
+              }
+              finish();
+              startActivity(intent);
+            }
+          }
+        }
+        @Override
+        public void onCancelled(@NonNull DatabaseError error) {
+          throw error.toException();
+        }
+      });
     });
 
     // init textview listener (buttonPrivpol)
